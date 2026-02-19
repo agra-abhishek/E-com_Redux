@@ -8,7 +8,7 @@ export default defineConfig({
     host: true,
     port: 5173,
     allowedHosts: [
-      "calvin-lou-plays-upgrading.trycloudflare.com"
+      "lightbox-introducing-theology-cheap.trycloudflare.com"
     ]
   }
 })

@@ -52,8 +52,8 @@ function Product() {
 
                                 {
                                     cartItems.find(cartItem => cartItem.id === item.id) ?
-                                        <button className="mt-4 w-full bg-red-600 text-white py-2 rounded-xl hover:bg-gray-800 transition" onClick={() => dispatch(removeItem(item))}>
-                                            Remove from Cart
+                                        <button className="mt-4 w-full bg-gray-400 text-white py-2 rounded-xl hover:bg-gray-800 transition" >
+                                            Added To cart
                                         </button>
                                         : <button className="mt-4 w-full bg-blue-400 text-white py-2 rounded-xl hover:bg-gray-800 transition" onClick={() => dispatch(addItem(item))}>
                                             Add to Cart

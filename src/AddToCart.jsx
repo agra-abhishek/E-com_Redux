@@ -1,6 +1,8 @@
 import { FaShoppingCart } from "react-icons/fa";
 import { useSelector } from "react-redux";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 function AddToCart() {
     const [open, setOpen] = useState(false);
 
@@ -10,6 +12,7 @@ function AddToCart() {
     return (
         
             <div className="relative">
+                <Link to='/cart'>
                 <div className="relative cursor-pointer" onClick={() => setOpen(!open)}>
                     <FaShoppingCart className="w-6 h-6 text-gray-700 hover:text-indigo-600 transition" />
                     {/* Cart Badge */}
@@ -17,7 +20,8 @@ function AddToCart() {
                         {CartLength}
                     </span>
                 </div>
-                {open &&(
+                </Link>
+                {/* {open &&(
                     <div className="absolute right-0 mt-4 w-80 bg-white shadow-xl rounded-xl p-4 z-50">
           {CartLength === 0 ? (
             <p className="text-center text-gray-500">Cart is Empty</p>
@@ -46,7 +50,7 @@ function AddToCart() {
             ))
         )}
             </div>
-                )}
+                )} */}
         </div>
     );}
 

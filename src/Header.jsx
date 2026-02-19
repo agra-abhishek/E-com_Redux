@@ -1,4 +1,5 @@
 import AddToCart from "./AddToCart";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -14,14 +15,9 @@ function Header() {
         {/* Menu */}
         <ul className="hidden md:flex space-x-8 font-medium text-gray-700">
           <li className="hover:text-indigo-600 cursor-pointer transition">
-            Home
+            <Link to='/'>Home</Link>
           </li>
-          <li className="hover:text-indigo-600 cursor-pointer transition">
-            Products
-          </li>
-          <li className="hover:text-indigo-600 cursor-pointer transition">
-            Sales
-          </li>
+         
         </ul>
 
         {/* Add To Cart Component */}

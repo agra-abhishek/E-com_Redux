@@ -3,6 +3,8 @@ import Product from "./Product"
 import { useDispatch } from "react-redux";
 
 import { clearAllItem } from "./redux/slice";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import CartList from "./CartList";
 
 
 const App = () => {
@@ -10,13 +12,15 @@ const App = () => {
 
   return (
     <>
-     
+     <BrowserRouter>
       <Header/>
-      <button className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition" onClick={()=>dispatch(clearAllItem())}>
-       Clear Cart
-                </button>
-      <Product/>
+    
       
+      <Routes>
+        <Route path='/' element={<Product/>}/>
+        <Route path='/cart' element={<CartList/>}/>
+      </Routes>
+      </BrowserRouter>
     </>
   )
 }
