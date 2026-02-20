@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
-import { increaseQuantity, decreaseQuantity,clearAllItem  } from "./redux/slice"
+import { increaseQuantity, decreaseQuantity,clearAllItem, removeItem  } from "./redux/slice"
 import { useNavigate } from "react-router-dom";
 
 const CartList = () => {
@@ -85,7 +85,7 @@ const handleCheckout = () => {
 
 
 
-                                <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl transition">
+                                <button className="bg-red-500 hover:bg-red-600 text-white px-4 py-2 rounded-xl transition" onClick={() => dispatch(removeItem(item.id))}>
                                     Remove Item
                                 </button>
                             </div>
